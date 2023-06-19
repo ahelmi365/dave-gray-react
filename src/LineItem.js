@@ -1,7 +1,7 @@
 import React from "react";
 import { FaTrashAlt } from "react-icons/fa";
 
-const ItemList = ({ item , handleCheck, handleDelete}) => {
+const ItemList = ({ item, handleCheck, handleDelete }) => {
   return (
     <li>
       <input
@@ -9,11 +9,13 @@ const ItemList = ({ item , handleCheck, handleDelete}) => {
         checked={item.checked}
         name={item.id}
         id={item.id}
-        onChange={()=> handleCheck(item.id)}
+        onChange={() => handleCheck(item.id)}
       />
+
       <label htmlFor={item.id}>{item.item}</label>
-      <FaTrashAlt  
-      onClick={()=> handleDelete(item.id)}
+
+      <FaTrashAlt
+        onClick={() => handleDelete(item.id)}
         aria-label={`Delet ${item.item}`}
         role="button"
       />

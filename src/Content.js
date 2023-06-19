@@ -1,11 +1,11 @@
 import React from "react";
 import ItemList from "./ItemList";
 
-const Content = ({ title, className, items, handleCheck, handleDelete }) => {
+const Content = ({ title, items, handleCheck, handleDelete }) => {
   return (
-    <div className={className}>
+    <>
       <h1>{title}</h1>
-      {items.length > 0 ? (
+      {items?.length > 0 ? (
         <ItemList
           items={items}
           handleCheck={handleCheck}
@@ -14,7 +14,7 @@ const Content = ({ title, className, items, handleCheck, handleDelete }) => {
       ) : (
         <h2>No list items</h2>
       )}
-    </div>
+    </>
   );
 };
 
